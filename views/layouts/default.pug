@@ -1,0 +1,26 @@
+//- Default Template
+doctype html
+html(lang="es")
+	block vars
+		- var pageTitle = 'Título Genérico'
+
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title #{pageTitle}
+		include ../partials/_favicon.pug
+
+	body
+		block header
+			include ../partials/_header.pug
+
+		.content#content(data-tenplate=template)
+			block content
+
+		block scripts
+
+
+		block foot
+			include ../partials/_footer.pug
+
